@@ -1,8 +1,8 @@
 package ru.test;
 
 public class Book {
-    String name;
-    Autor author;
+   private String name;
+   private Autor author;
     int publishingYear;
 
     public Book(String name, Autor author, int publishingYear) {
@@ -12,18 +12,27 @@ public class Book {
     }
 
     public String getName() {
+
         return this.name;
     }
 
     public Autor getAuthor() {
+
         return this.author;
     }
 
     public int getPublishingYear() {
+
         return publishingYear;
     }
 
     public void setPublishingYear(int publishingYear) {
+
         this.publishingYear = publishingYear;
+    }
+
+    @Override
+    public String toString() {
+        return "Название " + name + " автор " + author.toString() + " год издания " + publishingYear;
     }
 }
